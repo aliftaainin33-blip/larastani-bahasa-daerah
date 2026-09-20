@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#176b3a">
+  <title>LARASTANI — Plant Clinic untuk Petani Lansia</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="toast" class="toast"></div>
+
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark">🌱</div>
+      <div>
+        <div class="brand-name">LARASTANI</div>
+        <div class="brand-sub" data-i18n="brandSub">Plant Clinic untuk Petani Lansia</div>
+      </div>
+    </div>
+    <div class="top-actions">
+      <button class="icon-btn" id="speakPage" title="Bacakan halaman">🔊</button>
+      <button class="icon-btn" id="settingsBtn" title="Pengaturan">⚙️</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HOME / LANGUAGE -->
+    <section id="home" class="screen active">
+      <div class="hero">
+        <div class="hero-copy">
+          <span class="pill">🌾 Plant Clinic</span>
+          <h1 data-i18n="heroTitle">Teknologi yang memahami bahasa petani.</h1>
+          <p data-i18n="heroText">Informasi lebih dekat, mudah dimengerti, dan bermanfaat untuk membantu merawat tanaman.</p>
+          <button class="primary big" id="startBtn" data-i18n="start">Wiwiti</button>
+        </div>
+        <div class="hero-art">
+          <div class="mountain m1"></div>
+          <div class="mountain m2"></div>
+          <div class="field f1"></div>
+          <div class="field f2"></div>
+          <div class="farmer">👨‍🌾</div>
+          <div class="farmer wife">👩‍🌾</div>
+        </div>
+      </div>
+
+      <div class="language-card">
+        <div>
+          <h2 data-i18n="chooseLanguage">Pilih bahasa</h2>
+          <p data-i18n="languageHint">Pilih bahasa yang paling Anda kuasai sehari-hari.</p>
+        </div>
+        <div class="language-grid">
+          <button class="lang-option selected" data-lang="id"><span>🇮🇩</span><span>Bahasa Indonesia</span><span class="radio"></span></button>
+          <button class="lang-option" data-lang="jv"><span>👨‍🌾</span><span>Bahasa Jawa</span><span class="radio"></span></button>
+          <button class="lang-option" data-lang="su"><span>👨‍🌾</span><span>Bahasa Sunda</span><span class="radio"></span></button>
+          <button class="lang-option" data-lang="mad"><span>👨‍🌾</span><span>Bahasa Madura</span><span class="radio"></span></button>
+          <button class="lang-option" data-lang="ban"><span>👨‍🌾</span><span>Bahasa Bali</span><span class="radio"></span></button>
+        </div>
+        <div class="note">🔊 <span data-i18n="languageNote">Semua bahasa menggunakan kata sederhana dan akrab di telinga petani.</span></div>
+      </div>
+    </section>
+
+    <!-- MAIN MENU -->
+    <section id="menu" class="screen">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">LARASTANI</span>
+          <h2 data-i18n="menuTitle">Menu Utama</h2>
+          <p data-i18n="menuSubtitle">Pilih layanan yang Anda butuhkan.</p>
+        </div>
+        <div class="mini-avatar">👨‍🌾</div>
+      </div>
+
+      <div class="service-grid">
+        <button class="service-card diagnosis" data-go="diagnosis">
+          <span class="service-icon">📷</span><b data-i18n="diagnosis">Diagnosa Tanduran</b><small data-i18n="diagnosisSmall">Foto tanaman untuk melihat kemungkinan penyakit</small>
+        </button>
+        <button class="service-card info" data-go="info">
+          <span class="service-icon">📖</span><b data-i18n="info">Informasi Penyakit</b><small data-i18n="infoSmall">Gejala, penyebab, dan pencegahan</small>
+        </button>
+        <button class="service-card solution" data-go="solution">
+          <span class="service-icon">🧴</span><b data-i18n="solution">Solusi & Pengendalian</b><small data-i18n="solutionSmall">Langkah perawatan yang mudah diikuti</small>
+        </button>
+        <button class="service-card expert" data-go="expert">
+          <span class="service-icon">👨‍🌾</span><b data-i18n="expert">Takon Pakar</b><small data-i18n="expertSmall">Tanya lewat teks atau suara</small>
+        </button>
+        <button class="service-card history" data-go="history">
+          <span class="service-icon">🗂️</span><b data-i18n="history">Riwayat</b><small data-i18n="historySmall">Lihat hasil pemeriksaan sebelumnya</small>
+        </button>
+      </div>
+
+      <div class="benefits">
+        <div><span>🙂</span><p><b data-i18n="benefit1Title">Mudah dipahami</b><br><small data-i18n="benefit1">Informasi menggunakan bahasa sehari-hari.</small></p></div>
+        <div><span>❤️</span><p><b data-i18n="benefit2Title">Lebih percaya diri</b><br><small data-i18n="benefit2">Petani lebih nyaman menggunakan teknologi.</small></p></div>
+        <div><span>🌱</span><p><b data-i18n="benefit3Title">Lebih cepat</b><br><small data-i18n="benefit3">Membantu mengenali masalah tanaman.</small></p></div>
+        <div><span>👥</span><p><b data-i18n="benefit4Title">Lebih dekat</b><br><small data-i18n="benefit4">Menjembatani teknologi dan komunikasi.</small></p></div>
+      </div>
+    </section>
+
+    <!-- DIAGNOSIS -->
+    <section id="diagnosis" class="screen">
+      <div class="section-head">
+        <button class="back" data-back>←</button>
+        <div><span class="eyebrow">02 / 05</span><h2 data-i18n="photoTitle">Foto Tanduran</h2><p data-i18n="photoHint">Foto daun atau tanaman yang ingin diperiksa.</p></div>
+      </div>
+
+      <div class="diagnosis-layout">
+        <div class="camera-card">
+          <div class="camera-preview" id="cameraPreview">
+            <div class="camera-empty" id="cameraEmpty">
+              <div class="camera-symbol">📷</div>
+              <b data-i18n="cameraReady">Siap mengambil foto</b>
+              <span data-i18n="cameraHint">Arahkan kamera ke bagian tanaman yang bermasalah.</span>
+            </div>
+            <video id="cameraVideo" autoplay playsinline hidden></video>
+            <img id="photoPreview" alt="Pratinjau foto tanaman" hidden>
+          </div>
+          <div class="camera-controls">
+            <label class="secondary upload">
+              🖼️ <span data-i18n="upload">Pilih Foto</span>
+              <input id="fileInput" type="file" accept="image/*" hidden>
+            </label>
+            <button class="shutter" id="captureBtn" title="Ambil foto">●</button>
+            <button class="secondary" id="cameraBtn">📷 <span data-i18n="camera">Kamera</span></button>
+          </div>
+          <button class="primary full" id="analyzeBtn" data-i18n="analyze">Analisis Tanaman</button>
+        </div>
+
+        <div class="tips-card">
+          <h3>💡 <span data-i18n="photoTips">Tips foto yang bagus</span></h3>
+          <ul>
+            <li data-i18n="tip1">Pastikan daun terlihat jelas.</li>
+            <li data-i18n="tip2">Gunakan cahaya yang cukup.</li>
+            <li data-i18n="tip3">Dekatkan kamera ke bagian yang bermasalah.</li>
+            <li data-i18n="tip4">Hindari foto yang terlalu buram.</li>
+          </ul>
+          <div class="sample">
+            <div class="leaf-art">🍃</div>
+            <div><b data-i18n="sampleTitle">Contoh bagian daun</b><small data-i18n="sampleText">Bintik atau perubahan warna dapat membantu proses pemeriksaan.</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESULT -->
+    <section id="result" class="screen">
+      <div class="section-head">
+        <button class="back" data-go="diagnosis">←</button>
+        <div><span class="eyebrow">03 / 05</span><h2 data-i18n="resultTitle">Hasil Diagnosa</h2><p data-i18n="resultHint">Hasil awal berdasarkan foto yang dikirim.</p></div>
+      </div>
+      <div class="result-card">
+        <div class="result-image"><img id="resultImage" alt="Foto tanaman"></div>
+        <div class="result-body">
+          <span class="badge green">Kemungkinan penyakit</span>
+          <h2>Bercak Daun <span>(Cercospora)</span></h2>
+          <p class="confidence">Tingkat keyakinan: <strong>85%</strong></p>
+          <div class="confidence-bar"><span style="width:85%"></span></div>
+          <button class="primary" data-go="info" data-i18n="detail">Deleng Rincian</button>
+        </div>
+      </div>
+      <div class="disclaimer">ℹ️ <span data-i18n="demoNote">Hasil ini adalah simulasi prototipe, bukan diagnosis pertanian profesional. Untuk keputusan penting, konsultasikan dengan penyuluh atau pakar.</span></div>
+    </section>
+
+    <!-- INFO -->
+    <section id="info" class="screen">
+      <div class="section-head">
+        <button class="back" data-back>←</button>
+        <div><span class="eyebrow">04 / 05</span><h2 data-i18n="detailTitle">Rincian Penyakit</h2><p>Bercak Daun (Cercospora)</p></div>
+      </div>
+      <div class="info-grid">
+        <article class="info-card"><span>🔎</span><h3 data-i18n="symptom">Gejala</h3><p>Ana bintik-bintik coklat bulat ing godhong. Daun dapat menguning jika serangan bertambah.</p></article>
+        <article class="info-card"><span>🦠</span><h3 data-i18n="cause">Penyebab</h3><p>Jamur Cercospora dapat berkembang pada kondisi lembap dan sirkulasi udara yang kurang baik.</p></article>
+        <article class="info-card"><span>🛡️</span><h3 data-i18n="prevention">Pencegahan</h3><p>Jaga kebersihan lahan, hindari daun terlalu basah, dan beri jarak tanam yang cukup.</p></article>
+        <article class="info-card"><span>🌿</span><h3 data-i18n="solutionCard">Solusi</h3><p>Buang bagian yang terserang, gunakan fungisida nabati sesuai petunjuk, dan perbaiki sirkulasi udara.</p></article>
+      </div>
+      <button class="primary full" data-go="solution" data-i18n="fullSolution">Solusi Lengkap</button>
+    </section>
+
+    <!-- SOLUTION -->
+    <section id="solution" class="screen">
+      <div class="section-head"><button class="back" data-back>←</button><div><span class="eyebrow">SOLUSI</span><h2 data-i18n="solutionTitle">Solusi & Pengendalian</h2><p data-i18n="solutionHint">Langkah sederhana yang bisa dilakukan petani.</p></div></div>
+      <div class="steps">
+        <div><span>1</span><div><b data-i18n="step1Title">Pisahkan daun yang parah</b><p data-i18n="step1Text">Buang bagian yang sangat terserang agar masalah tidak cepat menyebar.</p></div></div>
+        <div><span>2</span><div><b data-i18n="step2Title">Kurangi kelembapan</b><p data-i18n="step2Text">Atur jarak tanam dan sirkulasi udara di sekitar tanaman.</p></div></div>
+        <div><span>3</span><div><b data-i18n="step3Title">Gunakan pengendalian yang sesuai</b><p data-i18n="step3Text">Gunakan pengendalian nabati atau produk terdaftar sesuai aturan.</p></div></div>
+        <div><span>4</span><div><b data-i18n="step4Title">Pantau kembali</b><p data-i18n="step4Text">Foto kembali beberapa hari kemudian untuk melihat perubahan.</p></div></div>
+      </div>
+    </section>
+
+    <!-- EXPERT / AI CHAT -->
+    <section id="expert" class="screen">
+      <div class="section-head">
+        <button class="back" data-back>←</button>
+        <div>
+          <span class="eyebrow">05 / 05</span>
+          <h2 data-i18n="expertTitle">Takon Pakar</h2>
+          <p data-i18n="expertHint">Ceritakan kondisi tanaman dengan bebas. Tidak harus memilih pertanyaan.</p>
+        </div>
+      </div>
+
+      <div class="ai-expert-layout">
+        <aside class="ai-side-card">
+          <div class="ai-avatar">🌱</div>
+          <h3>LarasTani AI</h3>
+          <p data-i18n="aiSideText">Penceritaannya bebas. Petani bisa menjelaskan kondisi tanaman sedetail mungkin.</p>
+          <div class="ai-side-tip">
+            <b data-i18n="aiCanHelp">Bisa membantu:</b>
+            <ul>
+              <li data-i18n="aiHelp1">Mengenali kemungkinan masalah</li>
+              <li data-i18n="aiHelp2">Menjelaskan gejala dan penyebab</li>
+              <li data-i18n="aiHelp3">Memberi langkah penanganan</li>
+              <li data-i18n="aiHelp4">Menjawab pertanyaan lanjutan</li>
+            </ul>
+          </div>
+          <div class="selected-language">
+            🌐 <span data-i18n="selectedLanguage">Bahasa mengikuti pilihan di halaman awal</span>
+          </div>
+        </aside>
+
+        <div class="ai-chat-card">
+          <div class="ai-chat-head">
+            <div class="ai-avatar small">🌱</div>
+            <div>
+              <b>LarasTani <span data-i18n="aiExpertLabel">(AI Pakar Pertanian)</span></b>
+              <small data-i18n="aiHeadText">Ceritakan masalah tanaman dengan bahasa sehari-hari.</small>
+            </div>
+            <button class="secondary" id="clearChat" data-i18n="clearChat">Hapus Chat</button>
+          </div>
+
+          <div class="chat-messages" id="chatMessages">
+            <div class="chat bot">
+              <span class="avatar">🌱</span>
+              <div>
+                <b>LarasTani</b>
+                <p data-i18n="botGreeting">Halo. Ceritakan saja kondisi tanamanmu dengan detail. Misalnya jenis tanaman, perubahan daun, lokasi, cuaca, dan sejak kapan terjadi.</p>
+                <button class="read-answer" type="button" data-i18n="readAnswer">🔊 Bacakan</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="ai-input-area">
+            <button id="voiceMainBtn" class="voice-main" type="button" title="Bicara">
+              <span class="voice-main-icon">🎙️</span>
+            </button>
+            <div class="input-column">
+              <textarea id="questionInput" data-i18n-placeholder="questionPlaceholder" placeholder="Ceritakan kondisi tanaman secara detail..."></textarea>
+              <div class="input-hint">
+                <span id="voiceStatus" data-i18n="voiceHint">Tekan mikrofon untuk berbicara atau ketik cerita di sini.</span>
+                <span id="charCount">0</span>
+              </div>
+            </div>
+            <button id="sendBtn" class="send big-send" title="Kirim">➤</button>
+          </div>
+
+          <div class="voice-wave" id="voiceWave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+
+          <div class="quick-questions">
+            <span data-i18n="exampleLabel">Contoh:</span>
+            <button data-question="Godhong tanduran saya kuning lan ana bintik coklat. Wiwit minggu kepungkur. Apa kemungkinan penyebabe lan apa sing kudu tak lakoni?">🌿 <span data-i18n="example1">Daun menguning + bintik</span></button>
+            <button data-question="Tanduran saya layu sawise udan terus-terusan. Godhonge ana bercak. Kira-kira apa masalahnya?">🌧️ <span data-i18n="example2">Layu setelah hujan</span></button>
+            <button data-question="Saya ingin menjelaskan kondisi tanaman saya lebih lengkap. Apa saja informasi yang perlu saya ceritakan agar analisisnya lebih tepat?">💬 <span data-i18n="example3">Cara bercerita detail</span></button>
+          </div>
+        </div>
+
+        <aside class="ai-info-card">
+          <h3 data-i18n="infoPanelTitle">Informasi Tambahan</h3>
+          <div class="mini-disease">
+            <div class="mini-leaf">🍃</div>
+            <div><b data-i18n="miniDisease">Bercak Daun</b><small>(Cercospora)</small></div>
+          </div>
+          <button class="primary full" data-go="info" data-i18n="detail">Lihat Informasi</button>
+          <div class="ai-tip-list">
+            <h4>💡 <span data-i18n="tipsTitle">Tips untuk petani</span></h4>
+            <p>✓ <span data-i18n="tipA">Sebutkan jenis tanaman.</span></p>
+            <p>✓ <span data-i18n="tipB">Ceritakan warna/bentuk gejala.</span></p>
+            <p>✓ <span data-i18n="tipC">Sebutkan kapan gejala mulai muncul.</span></p>
+            <p>✓ <span data-i18n="tipD">Ceritakan kondisi cuaca/lahan.</span></p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- HISTORY -->
+    <section id="history" class="screen">
+      <div class="section-head"><button class="back" data-back>←</button><div><span class="eyebrow">RIWAYAT</span><h2 data-i18n="historyTitle">Riwayat Pemeriksaan</h2><p data-i18n="historyHint">Pemeriksaan yang tersimpan di perangkat ini.</p></div></div>
+      <div id="historyList" class="history-list"></div>
+      <button class="secondary full" id="clearHistory" data-i18n="clearHistory">Hapus Riwayat</button>
+    </section>
+  </main>
+
+  <nav class="bottom-nav">
+    <button data-go="menu" class="active"><span>🏠</span><small data-i18n="navHome">Ngarep</small></button>
+    <button data-go="history"><span>🗂️</span><small data-i18n="navHistory">Riwayat</small></button>
+    <button id="navSettings"><span>⚙️</span><small data-i18n="navSettings">Setelan</small></button>
+  </nav>
+
+  <div class="modal" id="settingsModal">
+    <div class="modal-card">
+      <button class="modal-close" id="closeSettings">×</button>
+      <h2>⚙️ Setelan</h2>
+      <label class="switch-row"><span>🔊 Bacakan jawaban</span><input id="speechToggle" type="checkbox" checked></label>
+      <label class="switch-row"><span>🔠 Teks besar</span><input id="largeTextToggle" type="checkbox"></label>
+      <p class="muted">Pengaturan disimpan di perangkat ini.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
