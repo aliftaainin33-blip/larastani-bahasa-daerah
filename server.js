@@ -6,7 +6,17 @@ const PORT = 5500;
 
 app.use(express.json());
 app.use(express.static(__dirname));
+app.get("/styles.css", (req, res) => {
+  res.sendFile(__dirname + "/styles.css");
+});
 
+app.get("/script.js", (req, res) => {
+  res.sendFile(__dirname + "/script.js");
+});
+
+app.get("/", (req, res) => {
+  res.sendFile(__dirname + "/index.html");
+});
 app.post("/api/tanya-pakar", async (req, res) => {
   try {
     const { message, language } = req.body;
