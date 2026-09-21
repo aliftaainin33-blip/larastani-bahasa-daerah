@@ -5,7 +5,7 @@ const app = express();
 const PORT = 5500;
 
 app.use(express.json());
-app.use(express.static("."));
+app.use(express.static(__dirname));
 
 app.post("/api/tanya-pakar", async (req, res) => {
   try {
