@@ -66,7 +66,9 @@ Jangan menyatakan diagnosis sebagai kepastian jika informasinya belum cukup.`
     });
   }
 });
-
+app.get("/", (req, res) => {
+  res.sendFile(__dirname + "/index.html");
+});
 app.listen(PORT, () => {
   console.log(`LarasTani berjalan di http://localhost:${PORT}`);
 });
